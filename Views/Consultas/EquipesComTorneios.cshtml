@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GestaoTorneiosEsports.Models.EquipeTorneioViewModel>
+
+@{
+    ViewData["Title"] = "Equipes com Torneios";
+}
+
+<div class="container">
+    <h1>Equipes com Torneios</h1>
+    <p class="lead">Consulta LINQ relacionando as duas classes - Equipes e seus respectivos Torneios</p>
+
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Resultados da Consulta</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.EquipeNome)</th>
+                        <th>@Html.DisplayNameFor(model => model.EquipeTag)</th>
+                        <th>@Html.DisplayNameFor(model => model.TorneioNome)</th>
+                        <th>@Html.DisplayNameFor(model => model.Jogo)</th>
+                        <th>@Html.DisplayNameFor(model => model.DataInicio)</th>
+                        <th>@Html.DisplayNameFor(model => model.Pontuacao)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.EquipeNome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.EquipeTag)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TorneioNome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Jogo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DataInicio)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Pontuacao)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">Voltar para Consultas</a>
+    </div>
+</div>

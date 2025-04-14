@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+<div class="container">
+    <div class="jumbotron bg-primary text-white">
+        <h1 class="display-4">Sistema de Gestão de Torneios de E-Sports</h1>
+        <p class="lead">Plataforma para gerenciar torneios, equipes e resultados de competições de esportes eletrônicos.</p>
+        <hr class="my-4 bg-white">
+        <p>Gerencie torneios, cadastre equipes, visualize estatísticas e muito mais com nosso sistema completo.</p>
+        <a class="btn btn-light btn-lg" asp-controller="Torneios" asp-action="Index" role="button">Ver Torneios</a>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4>Torneios</h4>
+                </div>
+                <div class="card-body">
+                    <p>Gerencie todos os seus torneios em um só lugar. Adicione informações como nome, jogo, datas e premiação.</p>
+                    <a asp-controller="Torneios" asp-action="Index" class="btn btn-primary">Gerenciar Torneios</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h4>Equipes</h4>
+                </div>
+                <div class="card-body">
+                    <p>Cadastre e acompanhe as equipes participantes. Registre nome, tag, país e pontuação de cada equipe.</p>
+                    <a asp-controller="Equipes" asp-action="Index" class="btn btn-success">Gerenciar Equipes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h4>Consultas LINQ</h4>
+                </div>
+                <div class="card-body">
+                    <p>Visualize estatísticas e informações detalhadas através de consultas específicas no banco de dados.</p>
+                    <a asp-controller="Consultas" asp-action="Index" class="btn btn-info">Ver Consultas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

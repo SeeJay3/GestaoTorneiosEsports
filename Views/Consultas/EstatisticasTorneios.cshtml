@@ -1,0 +1,49 @@
+﻿@model IEnumerable<GestaoTorneiosEsports.Models.EstatisticaTorneioViewModel>
+
+@{
+    ViewData["Title"] = "Estatísticas de Torneios";
+}
+
+<div class="container">
+    <h1>Estatísticas de Torneios</h1>
+    <p class="lead">Consulta LINQ usando funções de grupo (Count, Average, Max, Min)</p>
+
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h4>Resultados da Consulta</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="table-success">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.TorneioNome)</th>
+                        <th>@Html.DisplayNameFor(model => model.Jogo)</th>
+                        <th>@Html.DisplayNameFor(model => model.QuantidadeEquipes)</th>
+                        <th>@Html.DisplayNameFor(model => model.PontuacaoMedia)</th>
+                        <th>@Html.DisplayNameFor(model => model.PontuacaoMaxima)</th>
+                        <th>@Html.DisplayNameFor(model => model.PontuacaoMinima)</th>
+                        <th>@Html.DisplayNameFor(model => model.PremioTotal)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.TorneioNome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Jogo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.QuantidadeEquipes)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PontuacaoMedia)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PontuacaoMaxima)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PontuacaoMinima)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PremioTotal)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">Voltar para Consultas</a>
+    </div>
+</div>

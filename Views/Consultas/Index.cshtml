@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Consultas LINQ";
+}
+
+<div class="container">
+    <h1>Consultas LINQ</h1>
+    <p>Selecione uma das consultas disponíveis abaixo:</p>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5>Equipes com Torneios</h5>
+                </div>
+                <div class="card-body">
+                    <p>Consulta relacionando equipes com seus respectivos torneios.</p>
+                    <a asp-action="EquipesComTorneios" class="btn btn-primary">Visualizar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5>Estatísticas de Torneios</h5>
+                </div>
+                <div class="card-body">
+                    <p>Consulta com funções de grupo e estatísticas por torneio.</p>
+                    <a asp-action="EstatisticasTorneios" class="btn btn-success">Visualizar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5>Torneios Filtrados</h5>
+                </div>
+                <div class="card-body">
+                    <p>Consulta com filtros WHERE e HAVING para critérios específicos.</p>
+                    <a asp-action="TorneiosFiltrados" class="btn btn-info">Visualizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
