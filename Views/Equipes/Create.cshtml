@@ -1,7 +1,7 @@
 ﻿@model GestaoTorneiosEsports.Models.Equipe
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadatrar Equipe";
 }
 
 <h1>Create</h1>
@@ -46,16 +46,15 @@
             </div>
 
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group mt-3">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

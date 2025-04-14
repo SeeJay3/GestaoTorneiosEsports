@@ -1,81 +1,153 @@
-/* Estilos personalizados para o Sistema de Gestão de Torneios */
+/* Estilo moderno - Tema: Preto, Branco e Azul Escuro */
 
-/* Estilos gerais */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
+/* Barra de navegação */
+.navbar {
+    background-color: #1b263b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #3b82f6;
+}
+
+    .navbar a,
+    .navbar-brand {
+        color: #ffffff !important;
+    }
+
+        .navbar a:hover {
+            color: #3b82f6 !important;
+        }
+
+/* Cabeçalho grande */
 .jumbotron {
+    background: linear-gradient(135deg, #1b263b, #0d1b2a);
+    color: white;
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
 }
 
-/* Estilos de cards */
+/* Cartões */
 .card {
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
     .card:hover {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transform: translateY(-5px);
+        transform: translateY(-6px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     }
 
 .card-header {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    background-color: #0d1b2a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
 }
 
 /* Tabelas */
 .table {
-    background-color: white;
+    background-color: #121212;
+    color: #ffffff;
+    border-collapse: collapse;
+    width: 100%;
 }
 
     .table th {
-        background-color: #f8f9fa;
+        background-color: #0d1b2a;
+        color: #ffffff;
+        padding: 10px;
     }
+
+    .table td {
+        padding: 10px;
+        border-top: 1px solid #2a2a2a;
+    }
+
+/* Tabela listrada com tema escuro */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.table td,
+.table th {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
 
 /* Botões */
 .btn {
-    border-radius: 5px;
-    transition: all 0.3s ease;
+   
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
     .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background-color: #3b82f6;
+        transform: scale(1.03);
+        box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
     }
 
 /* Formulários */
 .form-control {
-    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 8px;
 }
 
     .form-control:focus {
-        box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
     }
-
+/* Espaçamento para o grupo do botão */
+form .form-group:last-of-type {
+    margin-top: 10px;
+}
 /* Sessão de detalhes */
 .details-section {
-    background-color: white;
+    background-color: #121212;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 }
 
-/* Navbar */
-.navbar {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Footer */
+/* Rodapé */
 footer {
     padding: 20px 0;
     margin-top: 50px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #dee2e6;
+    background-color: #0d1b2a;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #1e3a8a;
 }

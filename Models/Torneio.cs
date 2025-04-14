@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
 
 namespace GestaoTorneiosEsports.Models
 {
@@ -41,6 +43,9 @@ namespace GestaoTorneiosEsports.Models
         
 
         // Relacionamento: Um torneio tem várias equipes
-        public virtual ICollection<Equipe> Equipes { get; set; } 
+       
+        [ValidateNever]
+        public virtual ICollection<Equipe> Equipes { get; set; }
+
     }
 }

@@ -25,19 +25,19 @@ namespace GestaoTorneiosEsports.Data
                     new Torneio
 
                     {
-                        Nome = "Global Championship 2024",
+                        Nome = "Worlds 2025",
                         Jogo = "League of Legends",
-                        DataInicio = new DateTime(2024, 6, 15),
-                        DataFim = new DateTime(2024, 7, 10),
+                        DataInicio = new DateTime(2025, 6, 15),
+                        DataFim = new DateTime(2025, 7, 10),
                         PremioTotal = 100000.00M,
                         Descricao = "Campeonato mundial com as melhores equipes."
                     },
                     new Torneio
                     {
-                        Nome = "Masters Cup 2024",
+                        Nome = "Major ESL",
                         Jogo = "Counter-Strike 2",
-                        DataInicio = new DateTime(2024, 8, 1),
-                        DataFim = new DateTime(2024, 8, 15),
+                        DataInicio = new DateTime(2025, 8, 1),
+                        DataFim = new DateTime(2025, 8, 15),
                         PremioTotal = 75000.00M,
                         Descricao = "Torneio premium com as equipes de elite."
                     },
@@ -45,8 +45,8 @@ namespace GestaoTorneiosEsports.Data
                     {
                         Nome = "Rocket Championship",
                         Jogo = "Rocket League",
-                        DataInicio = new DateTime(2024, 9, 5),
-                        DataFim = new DateTime(2024, 9, 12),
+                        DataInicio = new DateTime(2025, 9, 5),
+                        DataFim = new DateTime(2025, 9, 12),
                         PremioTotal = 50000.00M,
                         Descricao = "Competição de alta velocidade."
                     },
@@ -54,8 +54,8 @@ namespace GestaoTorneiosEsports.Data
                     {
                         Nome = "Battle Royale Invitational",
                         Jogo = "Fortnite",
-                        DataInicio = new DateTime(2024, 7, 20),
-                        DataFim = new DateTime(2024, 7, 22),
+                        DataInicio = new DateTime(2025, 7, 20),
+                        DataFim = new DateTime(2025, 7, 22),
                         PremioTotal = 60000.00M,
                         Descricao = "Torneio por convite para os melhores jogadores."
                     }
@@ -72,10 +72,10 @@ namespace GestaoTorneiosEsports.Data
                     // Equipes para League of Legends
                     new Equipe
                     {
-                        Nome = "Fnatic",
-                        Tag = "FNC",
+                        Nome = "Furia",
+                        Tag = "FUR",
                         NumeroJogadores = 5,
-                        Pais = "Reino Unido",
+                        Pais = "Brasil",
                         Pontuacao = 92,
                         TorneioId = torneios[0].TorneioId
                     },
@@ -90,10 +90,10 @@ namespace GestaoTorneiosEsports.Data
                     },
                     new Equipe
                     {
-                        Nome = "Cloud9",
-                        Tag = "C9",
+                        Nome = "Loud",
+                        Tag = "LLL",
                         NumeroJogadores = 5,
-                        Pais = "Estados Unidos",
+                        Pais = "Brasil",
                         Pontuacao = 88,
                         TorneioId = torneios[0].TorneioId
                     },
@@ -101,10 +101,10 @@ namespace GestaoTorneiosEsports.Data
                     // Equipes para Counter-Strike 2
                     new Equipe
                     {
-                        Nome = "FaZe Clan",
-                        Tag = "FZE",
+                        Nome = "SKT",
+                        Tag = "SKT",
                         NumeroJogadores = 5,
-                        Pais = "Internacional",
+                        Pais = "Brasil",
                         Pontuacao = 90,
                         TorneioId = torneios[1].TorneioId
                     },

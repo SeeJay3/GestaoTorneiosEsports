@@ -58,14 +58,25 @@ namespace GestaoTorneiosEsports.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TorneioId,Nome,Jogo,DataInicio,DataFim,PremioTotal,Descricao")] Torneio torneio)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(torneio);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                foreach (var key in ModelState.Keys)
+                {
+                    var errors = ModelState[key].Errors;
+                    foreach (var error in errors)
+                    {
+                        Console.WriteLine($"Erro em {key}: {error.ErrorMessage}");
+                    }
+                }
+
+                return View(torneio); // volta para a mesma página com os erros
             }
-            return View(torneio);
+
+            _context.Add(torneio);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
+
 
         // GET: Torneios/Edit/5
         public async Task<IActionResult> Edit(int? id)
